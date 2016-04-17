@@ -1,0 +1,6 @@
+source("read_data.R")
+powerData <- readData()
+png("plot2.png",width=480,height=480,units="px")
+plot(powerData$Date, powerData$Global_active_power, type = "n", xlab="", ylab="Global Active Power (kilowatts)")
+lines(powerData$Date, powerData$Global_active_power)
+dev.off()
